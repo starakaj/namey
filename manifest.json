@@ -1,0 +1,19 @@
+{
+  "name": "Namey",
+  "version": "0.6.1",
+  "description": "Adds links to littlesis search for the names of important people",
+  "icons": { "128": "icon.png" },
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [
+    { "matches": ["http://*/*", "https://*/*"], "js": ["namey_content_script.js"] }
+  ],
+  "permissions": [
+    "tabs",
+    "https://maps.google.com/*",
+    "https://maps.googleapis.com/*"
+  ],
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "names.json"
+  ]
+}
